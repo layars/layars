@@ -1,0 +1,11 @@
+{
+    "border": {
+        "radius": {
+            "sm": { "value": "{sizes.size_2.value}" },
+            "md": { "value": "{sizes.size_4.value}" },
+            "lg": { "value": "{sizes.size_8.value}" },
+            "pill": { "value": "{sizes.size_128.value}" },
+            "circle": { "value": "50%" }
+        }
+    }
+}
