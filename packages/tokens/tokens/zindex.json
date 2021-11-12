@@ -1,0 +1,10 @@
+{
+    "z-index": {
+        "floating": 1050,
+        "overlay": 1150,
+        "drawer": 1200,
+        "modal": 1300,
+        "notification": 1400,
+        "tooltip": 1500
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "font": {
+        "weight": {
+            "regular": { "value": 300 },
+            "bold": { "value": 500 }
+        },
+        "line-height": {
+            "tight": { "value": 1.2 },
+            "regular": { "value": 1.5 },
+            "loose": { "value": 1.8 }
+        },
+        "family": {
+            "sans": { "value": "'Inter', sans-serif" }
+        }
+    }
+}

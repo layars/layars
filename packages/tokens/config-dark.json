@@ -1,0 +1,17 @@
+{
+    "source": [
+        "./tokens/*.json",
+        "./tokens/dark/*.json"
+    ],
+    "platforms": {
+        "css": {
+            "transformGroup": "custom/css",
+            "prefix": "lrs",
+            "buildPath": "src/dark/",
+            "files": [{
+                "destination": "_variables.css",
+                "format": "css/variables"
+            }]
+        }
+    }
+}

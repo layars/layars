@@ -1,0 +1,12 @@
+{
+    "color": {
+        "constant": {
+            "black": { "value": "#000000" },
+            "white": { "value": "#ffffff" }
+        },
+        "image": {
+            "default": { "value": "#DBDBDB" },
+            "blackout": { "value": "#585858" }
+        }
+    }
+}

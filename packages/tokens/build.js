@@ -24,9 +24,11 @@ StyleDictionary.registerTransformGroup({
     transforms: ['attribute/cti', 'name/cti/kebab', 'size/rem', 'color/css', 'time/seconds', 'sizes/rem']
 })
 
-const StyleDictionaryExtended = StyleDictionary.extend(__dirname + '/config.json')
+const StyleDictionaryExtendedLight = StyleDictionary.extend(__dirname + '/config-light.json')
+StyleDictionaryExtendedLight.buildAllPlatforms()
 
-StyleDictionaryExtended.buildAllPlatforms()
+const StyleDictionaryExtendedDark = StyleDictionary.extend(__dirname + '/config-dark.json')
+StyleDictionaryExtendedDark.buildAllPlatforms()
 
 console.log('\n==============================================')
 console.log('\nBuild completed!')
