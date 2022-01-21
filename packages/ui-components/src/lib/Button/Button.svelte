@@ -3,7 +3,7 @@
     import { createEventDispatcher } from 'svelte'
 
     export let size: 'sm' | 'md' | 'lg' = 'md'
-    export let variant: 'solid' | 'outline' | 'ghost' | 'danger'
+    export let variant: 'primary' | 'secondary' | 'ghost' | 'danger' = 'primary'
 
     const dispatch = createEventDispatcher()
 
@@ -47,9 +47,12 @@
         background-color: var(--lrs-color-purple-300);
     }
 
+    button:focus {
+        box-shadow: 0 0 0 1px var(--lrs-color-constant-white), 0 0 0 4px var(--lrs-color-blue-300);
+    }
+
     button:active {
         background-color: var(--lrs-color-purple-500);
-        box-shadow: none;
     }
 
     .size--sm {
@@ -64,12 +67,11 @@
     }
 
     .variant--secondary {
-        background: transparent;
-        color: var(--lrs-color-purple-500);
-        border: var(--lrs-sizes-size-1) solid var(--lrs-color-purple-500);
+        background: var(--lrs-color-grey-400);
+        color: var(--lrs-color-constant-white);
     }
 
     .variant--secondary:hover {
-        background: var(--lrs-color-background-purple);
+        background: var(--lrs-color-grey-200);
     }
 </style>

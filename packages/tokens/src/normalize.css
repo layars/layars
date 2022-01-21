@@ -1,0 +1,290 @@
+*, ::before, ::after { 
+    box-sizing: border-box;
+}
+
+* {
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+*:where(:not(fieldset)) {
+    border-width: 0;
+    border-style: solid;
+}
+
+:where(html) {
+    block-size: 100%;
+    font-family: var(--lrs-font-sans);
+    line-height: var(--lrs-line-height-3);
+    -webkit-text-size-adjust: none;
+}
+
+:where(:not(:active)):focus-visible {
+    outline-offset: 4px;
+}
+
+:where(body) {
+    min-block-size: 100%;
+    scrollbar-gutter: stable both-edges;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+    line-height: var(--lrs-line-height-1);
+    font-weight: var(--lrs-font-weight-700);
+}
+
+:where(h1) {
+    font-size: var(--lrs-font-size-56);
+    max-inline-size: var(--lrs-header-1);
+}
+
+:where(h2) {
+    font-size: var(--lrs-font-size-40);
+    max-inline-size: var(--lrs-header-2);
+}
+
+:where(h3) {
+    font-size: var(--lrs-font-size-32);
+}
+
+:where(h4) {
+    font-size: var(--lrs-font-size-24);
+}
+
+:where(h5) {
+    font-size: var(--lrs-font-size-20)
+}
+
+:where(h3, h4, h5, h6, dt) {
+    max-inline-size: var(--lrs-header-3);
+}
+
+:where(p, ul, ol, dl, h6) {
+    font-size: var(--lrs-font-size-16);
+}
+
+:where(a, u, ins, abbr) {
+    text-underline-offset: 1px;
+}
+
+:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+:where(a) {
+    padding-inline: var(--lrs-size-4);
+    margin-inline: calc(var(--lrs-size-4) * -1);
+    padding-block: var(--lrs-size-4);
+    margin-block: calc(var(--lrs-size-4) * -1);
+}
+
+:where(a[href]) {
+    text-decoration-color: var(--lrs-blue-2);
+}
+
+:where(a[href]:visited) {
+    text-decoration-color: var(--lrs-purple-2)
+}
+
+:where(a:not(:hover)) {
+    text-decoration: inherit;
+}
+
+:where(button) {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: block;
+}
+
+:where(img, svg, video) {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+:where(input, button, textarea, select) {
+    font: inherit;
+    font-size: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+}
+
+:where(input, select) {
+    padding-inline: var(--lrs-size-8);
+    padding-block: var(--lrs-size-4);
+}
+
+:where(textarea) {
+    resize: block;
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+    block-size: var(--lrs-size-16);
+    inline-size: var(--lrs-size-16);
+}
+
+:where(svg) {
+    stroke: none;
+    fill: currentColor;
+}
+
+:where(svg:where(:not([fill]))) {
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+:where(svg:where(:not([width]))) {
+    inline-size: var(--lrs-size-80);
+}
+
+:where(code, kbd, samp, pre) {
+    font-family: var(--lrs-font-mono);
+}
+
+:where(:not(pre) > code, kbd) {
+    white-space: nowrap;
+}
+
+:where(pre) {
+    white-space: pre;
+    min-inline-size: 0;
+    max-inline-size: max-content;
+}
+
+:where(:not(pre) > code) {
+    padding: var(--lrs-size-4) var(--lrs-size-8);
+    background: var(--lrs-gray-3);
+    border-radius: var(--lrs-radius-4);
+}
+
+:where(kbd, var) {
+    padding: var(--lrs-size-4) var(--lrs-size-8);
+    border-width: var(--lrs-border-size-1);
+    border-color: var(--lrs-gray-5);
+    border-radius: var(--lrs-radius-4);
+}
+
+:where(mark) {
+    border-radius: var(--lrs-radius-4);
+    padding-inline: var(--lrs-size-4);
+}
+
+:where(ol, ul) {
+    padding-inline-start: var(--lrs-size-48);
+}
+
+:where(li) {
+    padding-inline-start: var(--lrs-size-8);
+}
+
+:where(li, dd, figcaption) {
+    max-inline-size: var(--lrs-content-2);
+}
+
+:where(p) {
+    max-inline-size: var(--lrs-content-3);
+}
+
+:where(dt, summary) {
+    font-weight: var(--font-weight-700);
+}
+
+:where(dt:not(:first-of-type)) {
+    margin-block-start: var(--lrs-size-24);
+}
+
+:where(small) {
+    font-size: max(.5em, var(--lrs-font-size-12));
+    max-inline-size: var(--lrs-content-1);
+}
+
+:where(hr) {
+    margin-block: var(--lrs-size-fluid-5);
+    height: var(--border-size-2);
+    background-color: var(--lrs-gray-4);
+}
+
+:where(figure) {
+    display: grid;
+    gap: var(--lrs-size-8);
+    place-items: center;
+}
+
+:where(figure > :where(figcaption)) {
+    font-size: var(--lrs-font-size-16);
+}
+
+:where(blockquote, :not(blockquote) > cite) {
+    border-inline-start-width: var(--lrs-border-size-4);
+}
+
+:where(blockquote) {
+    display: grid;
+    gap: var(--lrs-size-16);
+    padding-block: var(--lrs-size-16);
+    padding-inline: var(--lrs-size-20);
+    max-inline-size: var(--lrs-content-2);
+}
+
+:where(:not(blockquote) > cite) {
+    padding-inline-start: var(--lrs-size-8);
+}
+
+:where(summary) {
+    background-color: var(--lrs-gray-3);
+    padding: var(--lrs-size-8) var(--lrs-size-16);
+    margin: calc(var(--lrs-size-8) * -1) calc(var(--lrs-size-16) * -1);
+    border-radius: var(--lrs-radius-4);
+}
+
+:where(details) {
+    padding-inline: var(--lrs-size-16);
+    padding-block: var(--lrs-size-8);
+    background: var(--lrs-gray-2);
+    border-radius: var(--lrs-radius-4);
+}
+
+:where(details[open] > summary) {
+    margin-bottom: var(--lrs-size-8);
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+}
+
+:where(fieldset) {
+    border-radius: var(--lrs-radius-4);
+}
+
+:where(del) {
+    background: var(--lrs-red-8);
+    color: var(--lrs-red-2);
+}
+
+:where(ins) {
+    background: var(--lrs-green-8);
+    color: var(--lrs-green-1);
+}
+
+:where(abbr) {
+    text-decoration-color: var(--lrs-blue-6);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :where(html) { 
+        scroll-behavior: smooth; 
+    }
+    
+    :focus-visible { 
+        transition: outline-offset 145ms var(--lrs-ease-2); 
+    }
+    
+    :where(:not(:active)):focus-visible { 
+        transition-duration: .25s; 
+    }
+}

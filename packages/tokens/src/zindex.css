@@ -1,0 +1,9 @@
+:where(html) {
+    --lrs-floating: 1050;
+    --lrs-overlay: 1150;
+    --lrs-drawer: 1200;
+    --lrs-modal: 1300;
+    --lrs-notification: 1400;
+    --lrs-tooltip: 1500;
+    --lrs-important: 2147483647;
+}

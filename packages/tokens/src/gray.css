@@ -1,0 +1,12 @@
+:where(html) {
+    --lrs-gray-9: #202224;
+    --lrs-gray-8: #404548;
+    --lrs-gray-7: #61676B;
+    --lrs-gray-6: #818A8F;
+    --lrs-gray-5: #A1ACB3;
+    --lrs-gray-4: #B4BDC2;
+    --lrs-gray-3: #C7CDD1;
+    --lrs-gray-2: #D9DEE1;
+    --lrs-gray-1: #ECEEF0;
+    --lrs-gray-0: #F6F7F7;
+}

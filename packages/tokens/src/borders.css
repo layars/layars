@@ -1,0 +1,28 @@
+:where(html) {
+    --lrs-border-size-1: var(--lrs-size-1);
+    --lrs-border-size-2: var(--lrs-size-2);
+    --lrs-border-size-4: var(--lrs-size-4);
+    --lrs-border-size-8: var(--lrs-size-8);
+    --lrs-border-size-16: var(--lrs-size-16);
+    --lrs-border-size-24: var(--lrs-size-24);
+    --lrs-radius-2: var(--lrs-size-2);
+    --lrs-radius-4: var(--lrs-size-4);
+    --lrs-radius-8: var(--lrs-size-8);
+    --lrs-radius-16: var(--lrs-size-16);
+    --lrs-radius-32: var(--lrs-size-32);
+    --lrs-radius-64: var(--lrs-size-64);
+    --lrs-radius-128: var(--lrs-size-128);
+    --lrs-radius-round: 1e5px;
+    --lrs-radius-blob-1: 30% 70% 70% 30% / 53% 30% 70% 47%;
+    --lrs-radius-blob-2: 53% 47% 34% 66% / 63% 46% 54% 37%;
+    --lrs-radius-blob-3: 37% 63% 56% 44% / 49% 56% 44% 51%;
+    --lrs-radius-blob-4: 63% 37% 37% 63% / 43% 37% 63% 57%;
+    --lrs-radius-blob-5: 49% 51% 48% 52% / 57% 44% 56% 43%;
+    --lrs-radius-conditional-2: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-2));
+    --lrs-radius-conditional-4: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-4));
+    --lrs-radius-conditional-8: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-8));
+    --lrs-radius-conditional-16: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-16));
+    --lrs-radius-conditional-32: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-32));
+    --lrs-radius-conditional-64: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-64));
+    --lrs-radius-conditional-128: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-128));
+}
