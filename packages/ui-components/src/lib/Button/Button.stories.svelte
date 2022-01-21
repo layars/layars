@@ -5,16 +5,30 @@
 </script>
 
 <Meta 
-    title='@layars/ui/button'
+    title='@layars/ui/Button'
     component={Button}
     argTypes={{
         size: {
             control: 'select',
-            options: ['sm', 'md', 'lg']
+            options: ['sm', 'md', 'lg'],
+            defaultValue: 'md',
+            description: 'The size of the button.'
         },
         variant: {
             control: 'select',
-            options: ['primary', 'secondary', 'outline', 'ghost']
+            options: ['basic', 'primary', 'secondary', 'danger'],
+            defaultValue: 'primary',
+            description: 'The button variant type'
+        },
+        disabled: {
+            control: 'boolean',
+            defaultValue: false,
+            description: 'Is the button disabled'
+        },
+        depressed: {
+            control: 'boolean',
+            defaultValue: false,
+            description: 'Is the button in a depressed state.'
         }
     }}
 />
@@ -29,5 +43,10 @@
 </Template>
 
 <Story 
-    name='primary'
+    name='default'
+    args={{
+        variant: 'primary',
+        size: 'md',
+        disabled: false
+    }}
 />

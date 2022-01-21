@@ -3,13 +3,15 @@
     import { createEventDispatcher } from 'svelte'
 
     export let size: 'sm' | 'md' | 'lg' = 'md'
-    export let variant: 'primary' | 'secondary' | 'ghost' | 'danger' = 'primary'
+    export let variant: 'basic' | 'primary' | 'secondary' | 'danger' = 'primary'
+    export let disabled: boolean = false
+    export let depressed: boolean = false
 
     const dispatch = createEventDispatcher()
 
     const onClick = (event) => {
         dispatch('click', {
-            text: 'button clicked'
+            event: event
         })
     }
 </script>
@@ -19,8 +21,11 @@
         `btn`,
         `variant--${variant}`,
         `size--${size}`,
+        depressed ? `depressed` : ''
     )}
     on:click={onClick}
+    disabled={disabled}
+    aria-disabled={disabled}
 >
     <slot />
 </button>
@@ -30,48 +35,102 @@
         box-sizing: border-box;
         outline: none;
         border: none;
-        font-size: var(--lrs-sizes-size-14);
-        text-transform: uppercase;
-        font-weight: var(--lrs-font-weight-bold);
+        font-size: var(--lrs-size-14);
+        font-weight: var(--lrs-font-weight-500);
         font-family: 'Inter', sans-serif;
-        height: var(--lrs-sizes-size-48);
-        padding: 0 var(--lrs-sizes-size-24);
-        border-radius: var(--lrs-border-radius-md);
-        color: var(--lrs-color-constant-white);
-        background-color: var(--lrs-color-purple-400);
-        letter-spacing: 1.5%;
+        height: var(--lrs-size-48);
+        padding: 0 var(--lrs-size-24);
+        border-radius: var(--lrs-radius-4);
+        color: var(--lrs-white);
+        background-color: var(--lrs-action-primary-base);
         cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: var(--lrs-letterspacing-3);
     }
 
     button:hover {
-        background-color: var(--lrs-color-purple-300);
+        background-color: var(--lrs-action-primary-hover);
     }
 
     button:focus {
-        box-shadow: 0 0 0 1px var(--lrs-color-constant-white), 0 0 0 4px var(--lrs-color-blue-300);
+        box-shadow: 0 0 0 1px var(--lrs-white), 0 0 0 4px var(--lrs-blue-4);
     }
 
     button:active {
-        background-color: var(--lrs-color-purple-500);
+        background-color: var(--lrs-action-primary-pressed);
+    }
+
+    button:disabled {
+        background-color: var(--lrs-disabled-base);
+        color: var(--lrs-disabled-subtle);
+        pointer-events: none;
+    }
+
+    button.depressed {
+        background-color: var(--lrs-action-primary-depressed);
     }
 
     .size--sm {
-        font-size: var(--lrs-sizes-size-12);
-        height: var(--lrs-sizes-size-40);
-        padding: 0 var(--lrs-sizes-size-16);
+        font-size: var(--lrs-size-12);
+        height: var(--lrs-size-40);
+        padding: 0 var(--lrs-size-16);
     }
 
     .size--lg {
-        height: var(--lrs-sizes-size-56);
-        padding: 0 var(--lrs-sizes-size-32);
+        height: var(--lrs-size-56);
+        padding: 0 var(--lrs-size-32);
+    }
+
+    .variant--basic {
+        background-color: var(--lrs-action-basic-base);
+        border: 1px solid var(--lrs-border-base);
+        color: var(--lrs-text-emphasis);
+    }
+
+    .variant--basic:hover {
+        border-color: var(--lrs-border-hover);
+        background-color: var(--lrs-action-basic-hover);
+    }
+
+    .variant--basic:active {
+        border-color: var(--lrs-border-pressed);
+        background-color: var(--lrs-action-basic-pressed);
+    }
+
+    .variant--basic:disabled {
+        border-color: var(--lrs-disabled-base);
+        background-color: var(--lrs-action-basic-base);
+        color: var(--lrs-disabled-base);
     }
 
     .variant--secondary {
-        background: var(--lrs-color-grey-400);
-        color: var(--lrs-color-constant-white);
+        background: transparent;
+        border: none;
+        color: var(--lrs-text-primary);
     }
 
     .variant--secondary:hover {
-        background: var(--lrs-color-grey-200);
+        background-color: var(--lrs-action-secondary-hover);
+    }
+
+    .variant--secondary:active {
+        background-color: var(--lrs-action-secondary-pressed);
+    }
+
+    .variant--secondary:disabled {
+        background-color: transparent;
+        color: var(--lrs-disabled-base);
+    }
+
+    .variant--danger {
+        background-color: var(--lrs-action-danger-base);
+    }
+
+    .variant--danger:hover {
+        background-color: var(--lrs-action-danger-hover);
+    }
+
+    .variant--danger:active {
+        background-color: var(--lrs-action-danger-pressed);
     }
 </style>
