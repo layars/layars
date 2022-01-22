@@ -11,7 +11,15 @@
 
     const onClick = (event) => {
         dispatch('click', {
-            event: event
+            event: event,
+            type: 'click'
+        })
+    }
+
+    const onFocus = (event) => {
+        dispatch('focus', {
+            event: event,
+            type: 'focus'
         })
     }
 </script>
@@ -21,9 +29,10 @@
         `btn`,
         `variant--${variant}`,
         `size--${size}`,
-        depressed ? `depressed` : ''
+        depressed ? 'depressed' : ''
     )}
     on:click={onClick}
+    on:focus={onFocus}
     disabled={disabled}
     aria-disabled={disabled}
 >

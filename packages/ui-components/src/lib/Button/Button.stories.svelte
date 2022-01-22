@@ -29,13 +29,14 @@
             control: 'boolean',
             defaultValue: false,
             description: 'Is the button in a depressed state.'
-        }
+        },
     }}
 />
 
 <Template let:args>
     <Button
         on:click={action('on:click')}
+        on:focus={action('on:focus')}
         {...args}
     >
         Button
@@ -47,6 +48,7 @@
     args={{
         variant: 'primary',
         size: 'md',
-        disabled: false
+        disabled: false,
+        depressed: false
     }}
 />
