@@ -112,6 +112,11 @@
         color: var(--lrs-disabled-base);
     }
 
+    .variant--basic.depressed {
+        background-color: var(--lrs-action-basic-depressed);
+        color: var(--lrs-white);
+    }
+
     .variant--secondary {
         background: transparent;
         border: none;
@@ -131,6 +136,10 @@
         color: var(--lrs-disabled-base);
     }
 
+    .variant--secondary.depressed {
+        color: var(--lrs-white);
+    }
+
     .variant--danger {
         background-color: var(--lrs-action-danger-base);
     }
@@ -141,5 +150,9 @@
 
     .variant--danger:active {
         background-color: var(--lrs-action-danger-pressed);
+    }
+
+    .variant--danger.depressed {
+        background-color: var(--lrs-action-danger-depressed);
     }
 </style>
