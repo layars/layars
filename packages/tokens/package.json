@@ -8,8 +8,5 @@
     "build:config": "node ./build.js"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "style-dictionary": "^3.0.3"
-  }
+  "license": "ISC"
 }
