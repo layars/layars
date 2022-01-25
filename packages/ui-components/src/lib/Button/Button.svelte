@@ -26,17 +26,19 @@
 
 <button
     class={classnames(
-        `btn`,
+        `lrs-button`,
         `variant--${variant}`,
         `size--${size}`,
-        depressed ? 'depressed' : ''
+        depressed ? 'depressed' : '',
+        $$props.class
     )}
     on:click={onClick}
     on:focus={onFocus}
     disabled={disabled}
-    aria-disabled={disabled}
 >
+    <slot name='icon-before' />
     <slot />
+    <slot name='icon-after' />
 </button>
 
 <style>
@@ -44,7 +46,7 @@
         box-sizing: border-box;
         outline: none;
         border: none;
-        font-size: var(--lrs-size-14);
+        font-size: var(--lrs-size-16);
         font-weight: var(--lrs-font-weight-500);
         font-family: 'Inter', sans-serif;
         height: var(--lrs-size-48);
@@ -55,6 +57,9 @@
         cursor: pointer;
         font-family: 'Inter', sans-serif;
         letter-spacing: var(--lrs-letterspacing-3);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     button:hover {
@@ -79,10 +84,26 @@
         background-color: var(--lrs-action-primary-depressed);
     }
 
+    button :global([slot="icon-before"]),
+    button :global([slot="icon-after"]) {
+        height: var(--lrs-size-16);
+        width: var(--lrs-size-16);
+    }
+
+    button :global(svg path) {
+        fill: var(--lrs-white);
+    }
+
     .size--sm {
-        font-size: var(--lrs-size-12);
+        font-size: var(--lrs-size-14);
         height: var(--lrs-size-40);
         padding: 0 var(--lrs-size-16);
+    }
+
+    .size--sm :global([slot="icon-before"]),
+    .size--sm :global([slot="icon-after"]) {
+        height: var(--lrs-size-14);
+        width: var(--lrs-size-14);
     }
 
     .size--lg {
@@ -92,22 +113,18 @@
 
     .variant--basic {
         background-color: var(--lrs-action-basic-base);
-        border: 1px solid var(--lrs-border-base);
         color: var(--lrs-text-emphasis);
     }
 
     .variant--basic:hover {
-        border-color: var(--lrs-border-hover);
         background-color: var(--lrs-action-basic-hover);
     }
 
     .variant--basic:active {
-        border-color: var(--lrs-border-pressed);
         background-color: var(--lrs-action-basic-pressed);
     }
 
     .variant--basic:disabled {
-        border-color: var(--lrs-disabled-base);
         background-color: var(--lrs-action-basic-base);
         color: var(--lrs-disabled-base);
     }
@@ -117,18 +134,25 @@
         color: var(--lrs-white);
     }
 
+    .variant--basic :global(svg path) {
+        fill: var(--lrs-text-emphasis);
+    }
+
     .variant--secondary {
         background: transparent;
         border: none;
         color: var(--lrs-text-primary);
+        border: 1px solid var(--lrs-border-primary-base);
     }
 
     .variant--secondary:hover {
         background-color: var(--lrs-action-secondary-hover);
+        border-color: var(--lrs-border-primary-hover);
     }
 
     .variant--secondary:active {
         background-color: var(--lrs-action-secondary-pressed);
+        border-color: var(--lrs-border-primary-pressed);
     }
 
     .variant--secondary:disabled {
@@ -138,6 +162,10 @@
 
     .variant--secondary.depressed {
         color: var(--lrs-white);
+    }
+
+    .variant--secondary :global(svg path) {
+        fill: var(--lrs-text-primary);
     }
 
     .variant--danger {
@@ -154,5 +182,13 @@
 
     .variant--danger.depressed {
         background-color: var(--lrs-action-danger-depressed);
+    }
+
+    :global([slot="icon-before"]) {
+        margin-right: var(--lrs-size-8);
+    }
+
+    :global([slot="icon-after"]) {
+        margin-left: var(--lrs-size-8);
     }
 </style>

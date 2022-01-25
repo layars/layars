@@ -1,13 +1,13 @@
 <script>
     import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
     import { action } from '@storybook/addon-actions'
-    import Button from './Button.svelte'
+    import IconButton from './IconButton.svelte'
     import Placeholder from '@layars/icons/src/lib/Placeholder/Placeholder.svelte'
 </script>
 
 <Meta 
-    title='@layars/components/Button'
-    component={Button}
+    title='@layars/components/IconButton'
+    component={IconButton}
     argTypes={{
         size: {
             control: 'select',
@@ -34,63 +34,18 @@
     }}
 />
 
-<Template id='default' let:args>
-    <Button
+<Template let:args>
+    <IconButton
         on:click={action('on:click')}
         on:focus={action('on:focus')}
         {...args}
     >
-        Button
-    </Button>
-</Template>
-
-<Template id='icon-before' let:args>
-    <Button
-        on:click={action('on:click')}
-        on:focus={action('on:focus')}
-        {...args}
-    >
-        <Placeholder slot='icon-before' />
-        Button
-    </Button>
-</Template>
-
-<Template id='icon-after' let:args>
-    <Button
-        on:click={action('on:click')}
-        on:focus={action('on:focus')}
-        {...args}
-    >
-        Button
-        <Placeholder slot='icon-after' />
-    </Button>
+        <Placeholder />
+    </IconButton>
 </Template>
 
 <Story 
     name='default'
-    template='default'
-    args={{
-        variant: 'primary',
-        size: 'md',
-        disabled: false,
-        depressed: false
-    }}
-/>
-
-<Story 
-    name='icon before'
-    template='icon-before'
-    args={{
-        variant: 'primary',
-        size: 'md',
-        disabled: false,
-        depressed: false
-    }}
-/>
-
-<Story 
-    name='icon after'
-    template='icon-after'
     args={{
         variant: 'primary',
         size: 'md',

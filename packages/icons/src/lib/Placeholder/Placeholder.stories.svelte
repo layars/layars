@@ -4,14 +4,24 @@
 </script>
 
 <Meta 
-    title='@layars/icons/placeholder'
+    title='@layars/icons'
     component={Placeholder}
+    argTypes={{
+        color: {
+            defaultValue: 'text-emphasis',
+            description: 'The color of the icon.'
+        },
+        size: {
+            defaultValue: '3rem',
+            description: 'The size of the icon.'
+        },
+    }}
 />
 
 <Template let:args>
-    <Placeholder {...args}>Placeholder</Placeholder>
+    <Placeholder {...args} />
 </Template>
 
 <Story 
-    name='default'
+    name='placeholder'
 />
