@@ -16,7 +16,7 @@
 :where(html) {
     block-size: 100%;
     font-family: var(--lrs-font-sans);
-    line-height: var(--lrs-line-height-3);
+    line-height: var(--lrs-line-height-4);
     -webkit-text-size-adjust: none;
 }
 
@@ -30,7 +30,7 @@
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
-    line-height: var(--lrs-line-height-1);
+    line-height: var(--lrs-line-height-2);
     font-weight: var(--lrs-font-weight-700);
 }
 

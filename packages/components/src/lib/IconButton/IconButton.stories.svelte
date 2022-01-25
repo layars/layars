@@ -21,6 +21,12 @@
             defaultValue: 'primary',
             description: 'The button variant type'
         },
+        shape: {
+            control: 'select',
+            options: ['default', 'circle'],
+            defaultValue: 'default',
+            description: 'The shape of the icon button.'
+        },
         disabled: {
             control: 'boolean',
             defaultValue: false,
@@ -49,6 +55,7 @@
     args={{
         variant: 'primary',
         size: 'md',
+        shape: 'default',
         disabled: false,
         depressed: false
     }}
