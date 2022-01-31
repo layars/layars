@@ -1,6 +1,7 @@
 {
   "name": "@layars/icons",
   "version": "1.0.0",
+  "main": "src/lib/index.ts",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",

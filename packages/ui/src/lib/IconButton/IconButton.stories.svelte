@@ -2,7 +2,7 @@
     import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
     import { action } from '@storybook/addon-actions'
     import IconButton from './IconButton.svelte'
-    import Placeholder from '../../../../icons/src/lib/Placeholder/Placeholder.svelte'
+    import { Placeholder } from '@layars/icons'
 </script>
 
 <Meta 

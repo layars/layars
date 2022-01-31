@@ -48,15 +48,13 @@
         border: none;
         font-size: var(--lrs-size-16);
         font-weight: var(--lrs-font-weight-500);
-        font-family: 'Inter', sans-serif;
         height: var(--lrs-size-48);
         padding: 0 var(--lrs-size-24);
         border-radius: var(--lrs-radius-4);
         color: var(--lrs-white);
         background-color: var(--lrs-action-primary-base);
         cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        letter-spacing: var(--lrs-letterspacing-3);
+        letter-spacing: var(--lrs-letterspacing-2);
         display: flex;
         flex-direction: row;
         align-items: center;

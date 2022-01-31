@@ -1,7 +1,7 @@
 :where(html) {
-    --lrs-font-sans: '';
-    --lrs-font-serif: '';
-    --lrs-font-mono: '';
+    --lrs-font-sans: "'IBM Plex Sans', sans-serif";
+    --lrs-font-serif: "'IBM Plex Serif', serif";
+    --lrs-font-mono: "'IBM Plex Mono', monospace";
     --lrs-font-weight-100: 100;
     --lrs-font-weight-200: 200;
     --lrs-font-weight-300: 300;

@@ -4,8 +4,7 @@
   "workspaces": [
     "./packages/icons",
     "./packages/props",
-    "./packages/components",
-    "./packages/docs"
+    "./packages/ui"
   ],
   "scripts": {
     "dev": "svelte-kit dev",

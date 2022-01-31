@@ -12,7 +12,7 @@
             description: 'The color of the icon.'
         },
         size: {
-            defaultValue: '3rem',
+            defaultValue: '1rem',
             description: 'The size of the icon.'
         },
     }}
@@ -24,4 +24,8 @@
 
 <Story 
     name='placeholder'
+    args={{
+        color: 'text-emphasis',
+        size: '3rem'
+    }}
 />

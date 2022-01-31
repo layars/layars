@@ -1,8 +1,8 @@
 @media (prefers-color-scheme: dark) {
     :where(html) {
         --lrs-action-basic-base: var(--lrs-white);
-        --lrs-action-basic-hover: var(--lrs-gray-0);
-        --lrs-action-basic-pressed: var(--lrs-gray-1);
+        --lrs-action-basic-hover: var(--lrs-gray-1);
+        --lrs-action-basic-pressed: var(--lrs-gray-2);
         --lrs-action-basic-depressed: var(--lrs-gray-8);
         --lrs-action-primary-base: var(--lrs-purple-6);
         --lrs-action-primary-hover: var(--lrs-purple-7);
