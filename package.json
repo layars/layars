@@ -1,14 +1,16 @@
 {
-  "name": "layars",
+  "name": "new",
   "version": "0.0.1",
   "workspaces": [
     "./packages/icons",
-    "./packages/tokens",
-    "./packages/components"
+    "./packages/props",
+    "./packages/components",
+    "./packages/docs"
   ],
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
+    "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -18,29 +20,29 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.10",
-    "@storybook/addon-actions": "^6.4.14",
-    "@storybook/addon-essentials": "^6.4.14",
-    "@storybook/addon-links": "^6.4.14",
+    "@babel/core": "^7.16.12",
+    "@storybook/addon-actions": "^6.4.17",
+    "@storybook/addon-essentials": "^6.4.17",
+    "@storybook/addon-links": "^6.4.17",
     "@storybook/addon-svelte-csf": "^1.1.0",
-    "@storybook/svelte": "^6.4.14",
-    "@sveltejs/kit": "^1.0.0-next.1",
-    "@typescript-eslint/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/parser": "^5.10.0",
+    "@storybook/svelte": "^6.4.17",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
     "babel-loader": "^8.2.3",
-    "classnames": "^2.3.1",
-    "eslint": "^8.7.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.4.0",
-    "prettier": "^2.5.1",
-    "prettier-plugin-svelte": "^2.6.0",
-    "svelte": "^3.46.2",
-    "svelte-check": "^2.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "svelte": "^3.46.3",
+    "svelte-check": "^2.2.6",
     "svelte-loader": "^3.1.2",
-    "svelte-preprocess": "^4.10.2",
-    "svelte2tsx": "^0.4.14",
+    "svelte-preprocess": "^4.9.4",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.5"
+    "typescript": "^4.4.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {}
 }

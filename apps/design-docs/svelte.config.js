@@ -9,16 +9,7 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		package: {
-			exports: (filepath) => {
-				if (filepath.endsWith('.d.ts')) return false
-				if (filepath.endsWith('.stories.svelte')) return false
-				if (filepath.endsWith('.test.ts')) return false
-				if (filepath.endsWith('.spec.ts')) return false
-				return filepath
-			},
-			files: () => true
-		},
+
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte'
 	}

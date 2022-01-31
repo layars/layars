@@ -1,6 +1,6 @@
 <script>
     import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
-    import Placeholder from './Placeholder.svelte'
+    import { default as Placeholder } from './Placeholder.svelte'
 </script>
 
 <Meta 

@@ -1,6 +1,6 @@
 {
-  "name": "@layars/icons",
-  "version": "1.0.0",
+  "name": "design-docs",
+  "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -16,7 +16,6 @@
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
-    "classnames": "^2.3.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
@@ -25,7 +24,6 @@
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
     "svelte-preprocess": "^4.9.4",
-    "svelte2tsx": "^0.4.14",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
