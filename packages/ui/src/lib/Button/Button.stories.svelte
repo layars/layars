@@ -11,7 +11,7 @@
     argTypes={{
         size: {
             control: 'select',
-            options: ['sm', 'md', 'lg'],
+            options: ['xs', 'sm', 'md', 'lg'],
             defaultValue: 'md',
             description: 'The size of the button.'
         },

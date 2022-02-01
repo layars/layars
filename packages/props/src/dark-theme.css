@@ -1,8 +1,8 @@
 @media (prefers-color-scheme: dark) {
     :where(html) {
         --lrs-action-basic-base: var(--lrs-white);
-        --lrs-action-basic-hover: var(--lrs-gray-1);
-        --lrs-action-basic-pressed: var(--lrs-gray-2);
+        --lrs-action-basic-hover: var(--lrs-gray-0);
+        --lrs-action-basic-pressed: var(--lrs-gray-1);
         --lrs-action-basic-depressed: var(--lrs-gray-8);
         --lrs-action-primary-base: var(--lrs-purple-6);
         --lrs-action-primary-hover: var(--lrs-purple-7);
@@ -45,7 +45,7 @@
         --lrs-surface-success: var(--lrs-green-1);
         --lrs-surface-info: var(--lrs-blue-1);
         --lrs-surface-warning: var(--lrs-yellow-1);
-        --lrs-interactive-focus: var(--lrs-blue-3);
+        --lrs-interactive-focus: var(--lrs-blue-4);
         --lrs-interactive-base: var(--lrs-blue-6);
         --lrs-interactive-hover: var(--lrs-blue-7);
         --lrs-disabled-base: var(--lrs-gray-3);

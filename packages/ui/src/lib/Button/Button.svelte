@@ -1,8 +1,8 @@
 <script lang='ts'>
-    import classnames from 'classnames'
+    import clsx from 'clsx'
     import { createEventDispatcher } from 'svelte'
 
-    export let size: 'sm' | 'md' | 'lg' = 'md'
+    export let size: 'xs' | 'sm' | 'md' | 'lg' = 'md'
     export let variant: 'basic' | 'primary' | 'secondary' | 'danger' = 'primary'
     export let disabled: boolean = false
     export let depressed: boolean = false
@@ -25,7 +25,7 @@
 </script>
 
 <button
-    class={classnames(
+    class={clsx(
         `lrs-button`,
         `variant--${variant}`,
         `size--${size}`,
@@ -42,144 +42,29 @@
 </button>
 
 <style>
+    /* Base styles for all buttons */
     button {
         box-sizing: border-box;
         outline: none;
         border: none;
-        font-size: var(--lrs-size-16);
+        font-size: var(--lrs-size-14);
         font-weight: var(--lrs-font-weight-500);
-        height: var(--lrs-size-48);
-        padding: 0 var(--lrs-size-24);
         border-radius: var(--lrs-radius-4);
-        color: var(--lrs-white);
-        background-color: var(--lrs-action-primary-base);
         cursor: pointer;
         letter-spacing: var(--lrs-letterspacing-2);
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         align-items: center;
     }
 
-    button:hover {
-        background-color: var(--lrs-action-primary-hover);
-    }
-
     button:focus {
-        box-shadow: 0 0 0 1px var(--lrs-white), 0 0 0 4px var(--lrs-blue-4);
-    }
-
-    button:active {
-        background-color: var(--lrs-action-primary-pressed);
-    }
-
-    button:disabled {
-        background-color: var(--lrs-disabled-base);
-        color: var(--lrs-disabled-subtle);
-        pointer-events: none;
-    }
-
-    button.depressed {
-        background-color: var(--lrs-action-primary-depressed);
+        box-shadow: 0 0 0 var(--lrs-size-1) var(--lrs-white), 0 0 0 var(--lrs-size-4) var(--lrs-blue-4);
     }
 
     button :global([slot="icon-before"]),
     button :global([slot="icon-after"]) {
-        height: var(--lrs-size-16);
-        width: var(--lrs-size-16);
-    }
-
-    button :global(svg path) {
-        fill: var(--lrs-white);
-    }
-
-    .size--sm {
-        font-size: var(--lrs-size-14);
-        height: var(--lrs-size-40);
-        padding: 0 var(--lrs-size-16);
-    }
-
-    .size--sm :global([slot="icon-before"]),
-    .size--sm :global([slot="icon-after"]) {
         height: var(--lrs-size-14);
         width: var(--lrs-size-14);
-    }
-
-    .size--lg {
-        height: var(--lrs-size-56);
-        padding: 0 var(--lrs-size-32);
-    }
-
-    .variant--basic {
-        background-color: var(--lrs-action-basic-base);
-        color: var(--lrs-text-emphasis);
-    }
-
-    .variant--basic:hover {
-        background-color: var(--lrs-action-basic-hover);
-    }
-
-    .variant--basic:active {
-        background-color: var(--lrs-action-basic-pressed);
-    }
-
-    .variant--basic:disabled {
-        background-color: var(--lrs-action-basic-base);
-        color: var(--lrs-disabled-base);
-    }
-
-    .variant--basic.depressed {
-        background-color: var(--lrs-action-basic-depressed);
-        color: var(--lrs-white);
-    }
-
-    .variant--basic :global(svg path) {
-        fill: var(--lrs-text-emphasis);
-    }
-
-    .variant--secondary {
-        background: transparent;
-        border: none;
-        color: var(--lrs-text-primary);
-        border: 1px solid var(--lrs-border-primary-base);
-    }
-
-    .variant--secondary:hover {
-        background-color: var(--lrs-action-secondary-hover);
-        border-color: var(--lrs-border-primary-hover);
-    }
-
-    .variant--secondary:active {
-        background-color: var(--lrs-action-secondary-pressed);
-        border-color: var(--lrs-border-primary-pressed);
-    }
-
-    .variant--secondary:disabled {
-        background-color: transparent;
-        color: var(--lrs-disabled-base);
-    }
-
-    .variant--secondary.depressed {
-        color: var(--lrs-white);
-    }
-
-    .variant--secondary :global(svg path) {
-        fill: var(--lrs-text-primary);
-    }
-
-    .variant--danger {
-        background-color: var(--lrs-action-danger-base);
-    }
-
-    .variant--danger:hover {
-        background-color: var(--lrs-action-danger-hover);
-    }
-
-    .variant--danger:active {
-        background-color: var(--lrs-action-danger-pressed);
-    }
-
-    .variant--danger.depressed {
-        background-color: var(--lrs-action-danger-depressed);
     }
 
     :global([slot="icon-before"]) {
@@ -188,5 +73,141 @@
 
     :global([slot="icon-after"]) {
         margin-left: var(--lrs-size-8);
+    }
+
+    @media (min-width: 85.375rem) {
+        button {
+            font-size: var(--lrs-size-16);
+        }
+        
+        button :global([slot="icon-before"]),
+        button :global([slot="icon-after"]) {
+            height: var(--lrs-size-16);
+            width: var(--lrs-size-16);
+        }
+    }
+
+    /* Button size styles */
+    .size--xs {
+        max-height: var(--lrs-size-32);
+        min-height: var(--lrs-size-32);
+        padding: 0 var(--lrs-size-8);
+    }
+
+    .size--sm {
+        max-height: var(--lrs-size-40);
+        min-height: var(--lrs-size-40);
+        padding: 0 var(--lrs-size-16);
+    }
+
+    .size--md {
+        max-height: var(--lrs-size-48);
+        min-height: var(--lrs-size-48);
+        padding: 0 var(--lrs-size-24);
+    }
+
+    .size--lg {
+        max-height: var(--lrs-size-56);
+        min-height: var(--lrs-size-56);
+        padding: 0 var(--lrs-size-32);
+    }
+
+    /* Variant: Basic */
+    .variant--basic {
+        background-color: var(--lrs-action-basic-base);
+        border: var(--lrs-size-1) solid var(--lrs-action-basic-base);
+        color: var(--lrs-text-emphasis);
+    }
+
+    .variant--basic:hover {
+        background-color: var(--lrs-action-basic-hover);
+        border-color: var(--lrs-action-basic-hover);
+    }
+
+    .variant--basic:active {
+        background-color: var(--lrs-action-basic-pressed);
+        border-color: var(--lrs-action-basic-pressed);
+    }
+
+    .variant--basic:disabled {
+        background-color: var(--lrs-action-basic-base);
+        border-color: var(--lrs-action-basic-base);
+        color: var(--lrs-disabled-default);
+        pointer-events: none;
+    }
+
+    .variant--basic.depressed {
+        background-color: var(--lrs-action-basic-depressed);
+        border-color: var(--lrs-action-basic-depressed);
+    }
+
+    .variant--basic :global(svg path) {
+        fill: var(--lrs-text-emphasis);
+    }
+
+    /* Variant: Primary */
+    .variant--primary {
+        border: var(--lrs-size-1) solid var(--lrs-action-primary-base);
+        background-color: var(--lrs-action-primary-base);
+        color: var(--lrs-white);
+    }
+
+    .variant--primary:hover {
+        background-color: var(--lrs-action-primary-hover);
+        border-color: var(--lrs-action-primary-hover);
+    }
+
+    .variant--primary:active {
+        background-color: var(--lrs-action-primary-pressed);
+        border-color: var(--lrs-action-primary-pressed);
+    }
+
+    .variant--primary:disabled {
+        background-color: var(--lrs-disabled-base);
+        border-color: var(--lrs-disabled-base);
+        color: var(--lrs-disabled-subtle);
+        pointer-events: none;
+    }
+
+    .variant--primary.depressed {
+        background-color: var(--lrs-action-primary-depressed);
+        border-color: var(--lrs-action-primary-depressed);
+    }
+
+    .variant--primary :global(svg path) {
+        fill: var(--lrs-white);
+    }
+
+    /* Variant: Danger */
+    .variant--danger {
+        border: var(--lrs-size-1) solid var(--lrs-action-danger-base);
+        background-color: var(--lrs-action-danger-base);
+        color: var(--lrs-white);
+    }
+
+    .variant--danger:hover {
+        background-color: var(--lrs-action-danger-hover);
+        border-color: var(--lrs-action-danger-hover);
+    }
+
+    .variant--danger:active {
+        background-color: var(--lrs-action-danger-pressed);
+        border-color: var(--lrs-action-danger-pressed);
+    }
+
+    .variant--danger:disabled {
+        background-color: var(--lrs-disabled-base);
+        border-color: var(--lrs-disabled-base);
+        color: var(--lrs-disabled-subtle);
+        pointer-events: none;
+    }
+
+    .variant--danger.depressed {
+        background-color: var(--lrs-action-danger-depressed);
+        border-color: var(--lrs-action-danger-depressed);
+    }
+
+    .variant--danger :global(svg path) {
+        fill: var(--lrs-white);
     }
 </style>

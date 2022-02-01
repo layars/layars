@@ -1,6 +1,6 @@
 <script lang='ts'>
     import { Button } from '../Button'
-    import classnames from 'classnames'
+    import clsx from 'clsx'
     import { createEventDispatcher } from 'svelte'
 
     export let size: 'sm' | 'md' | 'lg' = 'md'
@@ -31,7 +31,7 @@
     variant={variant}
     disabled={disabled}
     depressed={depressed}
-    class={classnames(
+    class={clsx(
         'lrs-icon-button',
         `shape--${shape}`,
         $$props.class

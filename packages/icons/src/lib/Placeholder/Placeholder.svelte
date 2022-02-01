@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import classnames from 'classnames'
+    import clsx from 'clsx'
 
     export let color: string = 'text-emphasis'
     export let viewbox: string = '0 0 24 24'
@@ -15,7 +15,7 @@
     aria-hidden={true}
     height={height}
     width={width}
-    class={classnames(
+    class={clsx(
         'icon',
         'icon-placeholder',
         classes
