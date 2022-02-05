@@ -37,7 +37,7 @@
     disabled={disabled}
 >
     <slot name='icon-before' />
-    <slot />
+    <slot>Button</slot>
     <slot name='icon-after' />
 </button>
 
@@ -175,6 +175,41 @@
     }
 
     .variant--primary :global(svg path) {
+        fill: var(--lrs-white);
+    }
+
+    /* Variant: Secondary */
+    .variant--secondary {
+        border: var(--lrs-size-1) solid var(--lrs-action-primary-base);
+        background-color: transparent;
+        color: var(--lrs-text-primary);
+    }
+
+    .variant--secondary:hover {
+        background-color: var(--lrs-action-secondary-hover);
+    }
+
+    .variant--secondary:active {
+        background-color: var(--lrs-action-secondary-pressed);
+    }
+
+    .variant--secondary:disabled {
+        border-color: var(--lrs-disabled-base);
+        color: var(--lrs-disabled-base);
+        pointer-events: none;
+    }
+
+    .variant--secondary.depressed {
+        background-color: var(--lrs-action-primary-depressed);
+        border-color: var(--lrs-action-primary-depressed);
+        color: var(--lrs-white);
+    }
+
+    .variant--secondary :global(svg path) {
+        fill: var(--lrs-text-primary);
+    }
+
+    .variant--secondary.depressed :global(svg path) {
         fill: var(--lrs-white);
     }
 

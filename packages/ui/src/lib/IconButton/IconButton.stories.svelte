@@ -1,12 +1,13 @@
 <script>
     import { Meta, Template, Story } from '@storybook/addon-svelte-csf'
-    import { action } from '@storybook/addon-actions'
+    import { action, actions } from '@storybook/addon-actions'
     import IconButton from './IconButton.svelte'
     import { Placeholder } from '@layars/icons'
+import { exclude_internal_props } from 'svelte/internal'
 </script>
 
 <Meta 
-    title='@layars/components/IconButton'
+    title='@layars/ui/IconButton'
     component={IconButton}
     argTypes={{
         size: {
@@ -36,6 +37,11 @@
             control: 'boolean',
             defaultValue: false,
             description: 'Is the button in a depressed state.'
+        }
+    }}
+    parameters= {{
+        controls: {
+            exclude: ['click', 'focus', 'default']
         }
     }}
 />

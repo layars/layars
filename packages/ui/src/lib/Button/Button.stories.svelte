@@ -6,7 +6,7 @@
 </script>
 
 <Meta 
-    title='@layars/components/Button'
+    title='@layars/ui/Button'
     component={Button}
     argTypes={{
         size: {
@@ -30,6 +30,11 @@
             control: 'boolean',
             defaultValue: false,
             description: 'Is the button in a depressed state.'
+        }
+    }}
+    parameters= {{
+        controls: {
+            exclude: ['click', 'focus', 'icon-before', 'default', 'icon-after']
         }
     }}
 />
