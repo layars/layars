@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "pnpm build:icons && pnpm build:ui",
+    "build:icons": "pnpm package --filter @layars/icons",
+    "build:ui": "pnpm package --filter @layars/ui",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
