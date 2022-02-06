@@ -16,10 +16,14 @@
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest src --config jest.config.json --coverage --silent",
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.12",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "@jest/globals": "^27.5.0",
     "@storybook/addon-actions": "^6.4.17",
     "@storybook/addon-essentials": "^6.4.17",
     "@storybook/addon-links": "^6.4.17",
@@ -27,21 +31,28 @@
     "@storybook/svelte": "^6.4.17",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@testing-library/jest-dom": "^5.14.0",
+    "@testing-library/svelte": "^3.0.0",
+    "@types/jest": "^27.0.0",
+    "@types/testing-library__jest-dom": "^5.14.0",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
+    "babel-jest": "^27.0.0",
     "babel-loader": "^8.2.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "jest": "^27.0.0",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
     "svelte": "^3.46.3",
     "svelte-check": "^2.2.6",
+    "svelte-jester": "^2.0.1",
     "svelte-loader": "^3.1.2",
     "svelte-preprocess": "^4.9.4",
+    "ts-jest": "^27.0.0",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
-  "type": "module",
-  "dependencies": {}
+  "type": "module"
 }

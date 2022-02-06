@@ -8,6 +8,9 @@
     export let shape: 'default' | 'circle' = 'default'
     export let disabled: boolean = false
     export let depressed: boolean = false
+    export let type: 'button' | 'submit' | 'reset' = 'button'
+
+    const { class: classnames, ...restProps } = $$restProps
 
     const dispatch = createEventDispatcher()
 
@@ -31,13 +34,15 @@
     variant={variant}
     disabled={disabled}
     depressed={depressed}
+    type={type}
     class={clsx(
         'lrs-icon-button',
         `shape--${shape}`,
-        $$props.class
+        classnames
     )}
     on:click={onClick}
     on:focus={onFocus}
+    {...restProps}
 >
     <slot />
 </Button>

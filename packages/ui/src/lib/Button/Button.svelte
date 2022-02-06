@@ -6,6 +6,9 @@
     export let variant: 'basic' | 'primary' | 'secondary' | 'danger' = 'primary'
     export let disabled: boolean = false
     export let depressed: boolean = false
+    export let type: 'button' | 'submit' | 'reset' = 'button'
+
+    const { class: classnames, ...restProps } = $$restProps
 
     const dispatch = createEventDispatcher()
 
@@ -30,11 +33,13 @@
         `variant--${variant}`,
         `size--${size}`,
         depressed ? 'depressed' : '',
-        $$props.class
+        classnames
     )}
+    type={type}
     on:click={onClick}
     on:focus={onFocus}
     disabled={disabled}
+    {...restProps}
 >
     <slot name='icon-before' />
     <slot>Button</slot>
