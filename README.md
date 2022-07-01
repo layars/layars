@@ -1,0 +1,2 @@
+# layars
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/145c8aa30f4a4f9799ca7e85e697999b)](https://app.codacy.com/gh/layars/layars?utm_source=github.com&utm_medium=referral&utm_content=layars/layars&utm_campaign=Badge_Grade_Settings)
