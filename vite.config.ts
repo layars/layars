@@ -8,7 +8,8 @@ export default defineConfig({
     environment: 'happy-dom',
     include: ['packages/**/*.{spec,test}.ts'],
     coverage: {
-      exclude: ['**/*.{spec,test}.ts']
+      exclude: ['**/*.{spec,test}.ts'],
+      reporter: ['lcov', 'text', 'html', 'json']
     }
   }
 })
