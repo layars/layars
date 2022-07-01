@@ -1,0 +1,7 @@
+{
+    "primary": {
+        "default": { "value": "{charcoal.550}"},
+        "hover": { "value": "{charcoal.600}"},
+        "pressed": { "value": "{charcoal.700}"}
+    }
+}

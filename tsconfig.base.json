@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "es2022",
+        "lib": ["es2022", "dom", "dom.iterable"],
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "importsNotUsedAsValues": "preserve",
+        "esModuleInterop": true,
+        "strictPropertyInitialization": false,
+        "composite": true,
+    },
+    "include": ["**/*.ts", "**/*.js"],
+    "exclude": ["**/dist/", "**/build/", "**/node_modules/"]
+}

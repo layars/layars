@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🙋 Ask questions in our discussions tab
+    url: https://github.com/layars/layars/discussions/categories/q-a
+    about: Ask structured and fully-formed questions about Layars UI

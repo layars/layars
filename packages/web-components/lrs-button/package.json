@@ -1,0 +1,24 @@
+{
+  "name": "@layars/button",
+  "version": "0.0.0",
+  "main": "dist/lrs-button.es.js",
+  "exports": {
+    ".": "./dist/lrs-button.es.js"
+  },
+  "types": "types/lrs-button.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "lit": "^2.0.2"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9",
+    "typescript": "^4.5.4"
+  }
+}

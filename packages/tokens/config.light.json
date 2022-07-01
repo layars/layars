@@ -1,0 +1,13 @@
+{
+    "source": ["tokens/globals/**/*.json", "tokens/light/**/*.json"],
+    "platforms": {
+        "js": {
+            "transformGroup": "js",
+            "buildPath": "lib/",
+            "files": [{
+                "destination": "light.ts",
+                "format": "typescript"
+            }]
+        }
+    }
+}

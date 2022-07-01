@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.base",
+    "compilerOptions": {
+        "rootDir": "lib",
+        "outDir": "types",
+        "composite": true,
+        "types": ["node"],
+        "noImplicitAny": true,
+    },
+    "include": ["lib/**/*.ts"],
+    "exclude": ["dist", "tests", "**/*.stories.ts"]
+}

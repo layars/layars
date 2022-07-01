@@ -1,0 +1,43 @@
+{
+    "ash": {
+        "700": {
+            "value": "#a5b2bd"
+        },
+        "650": {
+            "value": "#aebac5"
+        },
+        "600": {
+            "value": "#b7c2cc"
+        },
+        "550": {
+            "value": "#bec8d1"
+        },
+        "500": {
+            "value": "#c5ced6"
+        },
+        "450": {
+            "value": "#cdd5dc"
+        },
+        "400": {
+            "value": "#d5dce1"
+        },
+        "350": {
+            "value": "#dde3e7"
+        },
+        "300": {
+            "value": "#e5e9ec"
+        },
+        "250": {
+            "value": "#ebeef1"
+        },
+        "200": {
+            "value": "#f1f3f5"
+        },
+        "150": {
+            "value": "#f5f7f8"
+        },
+        "100": {
+            "value": "#f9fafa"
+        }
+    }
+}

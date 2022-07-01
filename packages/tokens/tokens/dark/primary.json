@@ -1,0 +1,7 @@
+{
+    "primary": {
+        "default": { "value": "{ash.250}"},
+        "hover": { "value": "{ash.200}"},
+        "pressed": { "value": "{ash.100}"}
+    }
+}

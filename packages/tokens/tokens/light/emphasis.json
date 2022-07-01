@@ -1,0 +1,7 @@
+{
+    "emphasis": {
+        "default": { "value": "{purple.700}" },
+        "hover": { "value": "{purple.750}" },
+        "active": { "value": "{purple.850}" }
+    }
+}

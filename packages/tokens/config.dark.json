@@ -1,0 +1,13 @@
+{
+    "source": ["tokens/globals/**/*.json", "tokens/dark/**/*.json"],
+    "platforms": {
+        "js": {
+            "transformGroup": "js",
+            "buildPath": "lib/",
+            "files": [{
+                "destination": "dark.ts",
+                "format": "typescript"
+            }]
+        }
+    }
+}
