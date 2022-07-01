@@ -4,18 +4,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
     steps:
     - uses: actions/checkout@v3
     - uses: pnpm/action-setup@v2.2.2
       with:
         version: 7
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 18.x
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 18.x
         cache: 'pnpm'
     - name: Install dependencies
       run: pnpm install --no-frozen-lockfile
@@ -27,3 +24,8 @@ jobs:
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: cobertura.xml
