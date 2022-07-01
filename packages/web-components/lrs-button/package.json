@@ -12,7 +12,9 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "test": "vitest --coverage",
+    "report": "c8 report"
   },
   "dependencies": {
     "lit": "^2.0.2"
