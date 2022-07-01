@@ -13,7 +13,7 @@ export default {
 
 const Template: Story<LrsButton> = ({ slot }: Args) => html`
     <lrs-button>
-        ${slot}
+        Button
     </lrs-button>
 `
 

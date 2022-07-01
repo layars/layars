@@ -21,3 +21,9 @@ jobs:
       run: pnpm install --no-frozen-lockfile
     - name: Build tokens
       run: pnpm --filter @layars/tokens build
+    - name: Test Button
+      run: pnpm --filter @layars/button test
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}

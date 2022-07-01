@@ -1,4 +1,6 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
+// import eslintPlugin from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,5 +16,14 @@ export default defineConfig({
     rollupOptions: {
       external: /^lit/
     }
-  }
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    include: ['src/**/*.{spec,test}.ts'],
+    coverage: {
+      exclude: ['**/*.{spec,test}.ts']
+    }
+  },
+  // plugins: [eslintPlugin()],
 })
