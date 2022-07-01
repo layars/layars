@@ -5,6 +5,7 @@
   "description": "Layars Design System",
   "main": "index.js",
   "scripts": {
+    "build": "pnpm -r build",
     "test": "vitest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
