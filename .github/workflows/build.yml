@@ -22,7 +22,7 @@ jobs:
     - name: Build tokens
       run: pnpm --filter @layars/tokens build
     - name: Test Button
-      run: pnpm --filter @layars/button test
+      run: pnpm test
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:

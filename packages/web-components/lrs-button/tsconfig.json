@@ -16,7 +16,8 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["vitest/globals"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["**/dist/", "**/build/", "**/node_modules/", "**/*.stories.ts"],
