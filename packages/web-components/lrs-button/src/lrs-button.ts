@@ -4,20 +4,20 @@ import { LrsButtonVariant, LrsButtonSize, LrsButtonShape, LrsButtonType } from '
 
 
 /**
- * An example element.
+ * Layars button element
  *
  * @slot - This element has a slot
  * @csspart button - The button
  */
 @customElement('lrs-button')
-export class LrsButton extends LitElement {
+class LrsButton extends LitElement {
 
   /**
    * @prop variant
    * @default 'primary'
    * The variant type of the button.
    */
-  @property()
+  @property({ reflect: true })
   variant: LrsButtonVariant = 'primary'
 
   /**
@@ -25,7 +25,7 @@ export class LrsButton extends LitElement {
    * @default 'sm'
    * The size of the button
    */
-  @property()
+  @property({ reflect: true })
   size: LrsButtonSize = 'sm'
 
   /**
@@ -33,7 +33,7 @@ export class LrsButton extends LitElement {
    * @default 'pill'
    * The shape of the button
    */
-  @property()
+  @property({ reflect: true })
   shape: LrsButtonShape = 'pill'
 
   /**
@@ -41,7 +41,7 @@ export class LrsButton extends LitElement {
    * @default 'button'
    * The type of button
    */
-  @property()
+  @property({ reflect: true })
   type: LrsButtonType = 'button'
 
   /**
@@ -82,3 +82,5 @@ declare global {
     'lrs-button': LrsButton
   }
 }
+
+export default LrsButton

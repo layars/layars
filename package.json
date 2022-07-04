@@ -7,6 +7,7 @@
   "scripts": {
     "build": "pnpm -r build",
     "test": "vitest --coverage",
+    "lint": "pnpm -r lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -32,10 +33,14 @@
     "@storybook/builder-webpack4": "6.5.9",
     "@storybook/manager-webpack4": "6.5.9",
     "@storybook/web-components": "6.5.9",
+    "@types/eslint": "^8.4.5",
     "@types/node": "17.0.45",
+    "@typescript-eslint/eslint-plugin": "^5.30.3",
+    "@typescript-eslint/parser": "^5.30.3",
     "@vitest/ui": "0.16.0",
     "babel-loader": "8.2.5",
     "c8": "7.11.3",
+    "eslint": "^8.19.0",
     "happy-dom": "6.0.0",
     "lit": "2.2.7",
     "lit-html": "2.2.6",
