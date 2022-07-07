@@ -8,7 +8,7 @@ importers:
       '@storybook/addon-actions': 6.5.9
       '@storybook/addon-essentials': 6.5.9
       '@storybook/addon-links': 6.5.9
-      '@storybook/builder-vite': 0.1.38
+      '@storybook/builder-vite': 0.1.39
       '@storybook/builder-webpack4': 6.5.9
       '@storybook/manager-webpack4': 6.5.9
       '@storybook/web-components': 6.5.9
@@ -34,7 +34,7 @@ importers:
       '@storybook/addon-actions': 6.5.9_wcqkhtmu7mswc6yz4uyexck3ty
       '@storybook/addon-essentials': 6.5.9_ev5s37a5il73vvypig4jzqplye
       '@storybook/addon-links': 6.5.9_wcqkhtmu7mswc6yz4uyexck3ty
-      '@storybook/builder-vite': 0.1.38_wwfpo43b3xq6rvj6ynpu24aaam
+      '@storybook/builder-vite': 0.1.39_wwfpo43b3xq6rvj6ynpu24aaam
       '@storybook/builder-webpack4': 6.5.9_z6by3662bjvh4pt3mevfnp2bzu
       '@storybook/manager-webpack4': 6.5.9_z6by3662bjvh4pt3mevfnp2bzu
       '@storybook/web-components': 6.5.9_xw4wpv56nawtsfvj25a3a7mc2i
@@ -2213,8 +2213,8 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/builder-vite/0.1.38_wwfpo43b3xq6rvj6ynpu24aaam:
-    resolution: {integrity: sha512-aCBuVP3phWGpT4548dCjSWC9X4TOhzVOt+jq8BVbzZ/Cyou8UFN45Z5kMxtpVsVnJEQ0abC/BdkRuRtGEL/vJQ==}
+  /@storybook/builder-vite/0.1.39_wwfpo43b3xq6rvj6ynpu24aaam:
+    resolution: {integrity: sha512-lLRbB2Ut8/LT0U/D6hVu+gyalMzMNyhDAm04ik6FuNASn/roBML5G1NTvzt4zrsYTNpZoeCic7IKpe1NHsSfhQ==}
     peerDependencies:
       '@storybook/core-common': '>=6.4.3 || >=6.5.0-alpha.0'
       '@storybook/mdx2-csf': ^0.0.3
@@ -10731,7 +10731,7 @@ packages:
     dev: true
 
   /trim/0.0.1:
-    resolution: {integrity: sha1-WFhUf2spB1fulczMZm+1AITEYN0=}
+    resolution: {integrity: sha512-YzQV+TZg4AxpKxaTHK3c3D+kRDCGVEE7LemdlQZoQXn0iennk10RsIoY6ikzAqJTc9Xjl9C1/waHom/J86ziAQ==}
     dev: true
 
   /trough/1.0.5:
