@@ -64,7 +64,7 @@ importers:
       lodash.reduce: 4.6.0
       lodash.setwith: 4.3.2
       style-dictionary: 3.7.1
-      ts-node: 10.8.2
+      ts-node: 10.9.1
       typescript: 4.7.4
     devDependencies:
       '@types/lodash.reduce': 4.6.7
@@ -73,7 +73,7 @@ importers:
       lodash.reduce: 4.6.0
       lodash.setwith: 4.3.2
       style-dictionary: 3.7.1
-      ts-node: 10.8.2_x2utdhayajzrh747hktprshhby
+      ts-node: 10.9.1_x2utdhayajzrh747hktprshhby
       typescript: 4.7.4
 
   packages/web-components/lrs-button:
@@ -10743,8 +10743,8 @@ packages:
     engines: {node: '>=6.10'}
     dev: true
 
-  /ts-node/10.8.2_x2utdhayajzrh747hktprshhby:
-    resolution: {integrity: sha512-LYdGnoGddf1D6v8REPtIH+5iq/gTDuZqv2/UJUU7tKjuEU8xVZorBM+buCGNjj+pGEud+sOoM4CX3/YzINpENA==}
+  /ts-node/10.9.1_x2utdhayajzrh747hktprshhby:
+    resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
       '@swc/core': '>=1.2.50'
